@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SMS Message to Be Sent</title>
+    <!-- Styles for the page -->
+    <style>
+        body {
+            /* Background and layout settings */
+            background-color: #f1f1f1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            /* Container styling */
+            max-width: 28rem;
+            padding: 1.5rem;
+            background-color: #fff;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+
+        .container h2 {
+            /* Styling for the heading */
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .form-group {
+            /* Styling for form groups */
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            /* Styling for form labels */
+            font-weight: 600;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            /* Styling for form inputs, selects, and textareas */
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 0.25rem;
+            background-color: #f9f9f9;
+        }
+
+        .submit-button {
+            /* Styling for the submit button */
+            background-color: #3490dc;
+            color: #fff;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 0.25rem;
+            width: 100%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-button:hover {
+            /* Hover effect for the submit button */
+            background-color: #2779bd;
+        }
+        .footer {
+            /* Styling for the footer */
+            text-align: center;
+            font-size: 0.8rem;
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: #f1f1f1;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>SMS MESSAGE TO BE SENT</h2>
+        <!-- SMS form -->
+        <form method="post" action="">
+            <div class="form-group">
+                <label for="group_name">Group Name to send SMS</label>
+                <!-- Input field for group name -->
+                <input id="group_name" type="text" name="group_name" required>
+            </div>
+            <div class="form-group">
+                <label for="sms_message">Message</label>
+                <!-- Textarea for SMS message -->
+                <textarea id="sms_message" name="sms_message" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="send_time">Time when to send SMS</label>
+                <!-- Input field for sending time -->
+                <input id="send_time" type="time" name="send_time" required>
+            </div>
+            <div class="form-group">
+                <label for="repeat">Repeat</label>
+                <!-- Dropdown for selecting repeat option -->
+                <select name="repeat" required>
+                    <option value="">Select an option</option>
+                    <option value="daily">Daily</option>
+                    <option value="weekly">Weekly</option>
+                    <option value="biweekly">Biweekly</option>
+                    <option value="monthly">Monthly</option>
+                </select>
+            </div>
+            <!-- Submit button -->
+            <button class="submit-button" type="submit">Send SMS</button>
+        </form>
+    </div>
+    <!-- Page footer -->
+    <footer class="footer">
+        Made by Karan Khatik &copy; 2023
+    </footer>
+</body>
+</html>
